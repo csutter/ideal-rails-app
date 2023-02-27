@@ -1,0 +1,13 @@
+{
+	"name": "Ideal Rails app",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+"remoteUser": "devcontainer",
+"features": {
+	"ghcr.io/devcontainers/features/node:1": {
+		"nodeGypDependencies": true,
+		"version": "lts"
+	}
+}
+}
