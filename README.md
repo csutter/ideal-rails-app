@@ -19,3 +19,5 @@ consider "good" today will likely change over time as well.
 
 ## Changes over "default" Rails configuration
 - Avoid using Rails credentials management (prefer configuration as environment variables)
+- Use RSpec instead of Minitest (I don't actually have a preference, but RSpec is significantly
+  more common across my client base)
