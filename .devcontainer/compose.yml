@@ -1,0 +1,44 @@
+services:
+  app:
+    build: .
+    volumes:
+      - ..:/workspace
+      - bundle:/usr/local/bundle
+      - node_modules:/workspace/node_modules
+      - tmp:/workspace/tmp
+    working_dir: /workspace
+    command: sleep infinity
+    user: devcontainer
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgis://postgres:postgres@db
+      REDIS_URL: redis://redis:6379
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: postgres:15-alpine
+    restart: unless-stopped
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: postgres
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+volumes:
+  # Postgres data directory
+  postgres_data:
+  # Caches for Bundler/NPM/Yarn-installed dependencies to persist across rebuilds and install faster
+  bundle:
+  node_modules:
+  # Tempfile directory is IO-heavy and we don't need to have its contents replicated on host
+  tmp:
