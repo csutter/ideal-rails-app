@@ -16,3 +16,6 @@ otherwise, building software is a craft as much as an engineering discipline. Th
 contains patterns and "best practices" that *I personally* have found useful - but your mileage may
 (and very much will) vary. It is also a work in progress and will never be finished, and what I
 consider "good" today will likely change over time as well.
+
+## Changes over "default" Rails configuration
+- Avoid using Rails credentials management (prefer configuration as environment variables)
