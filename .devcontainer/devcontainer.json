@@ -4,6 +4,7 @@
   "service": "app",
   "workspaceFolder": "/workspace",
 	"remoteUser": "devcontainer",
+	"postCreateCommand": "/bin/bash .devcontainer/post_create.sh",
 	"features": {
 		"ghcr.io/devcontainers/features/node:1": {
 			"nodeGypDependencies": true,
