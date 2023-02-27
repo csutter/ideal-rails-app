@@ -12,3 +12,7 @@ echo 'Ensure `tmp` folder has `.keep` files'
 # leading Git to believe the `.keep` file has gone missing)
 mkdir -p tmp/{pids,storage}
 touch {tmp,tmp/pids,tmp/storage}/.keep
+
+echo 'Ensure development and test databases exist'
+bin/rails db:prepare
+RAILS_ENV=test bin/rails db:prepare
