@@ -10,5 +10,13 @@
 			"nodeGypDependencies": true,
 			"version": "lts"
 		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"KoichiSasada.vscode-rdbg",
+				"Shopify.ruby-lsp"
+			]
+		}
 	}
 }
