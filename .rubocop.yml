@@ -1,0 +1,12 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - bin/**/*
+
+Style/Documentation:
+  Exclude:
+    - app/helpers/application_helper.rb
+    - app/mailers/application_mailer.rb
+    - app/models/application_record.rb
+    - config/application.rb
+    - test/**/*
