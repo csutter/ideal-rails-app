@@ -7,7 +7,6 @@ ruby '3.2.1'
 
 gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
 
-gem 'importmap-rails'
 gem 'jbuilder'
 gem 'pg'
 gem 'puma', '~> 5.0'
