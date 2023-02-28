@@ -7,18 +7,22 @@ ruby '3.2.1'
 
 gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
 
-gem 'jbuilder'
-gem 'pg'
+# Application server
 gem 'puma', '~> 5.0'
+
+# Databases
+gem 'pg'
 gem 'redis'
+
+# Additional Rails tooling
+gem 'bootsnap', require: false
+gem 'jbuilder'
+
+# Frontend tooling
+gem 'jsbundling-rails'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-
-gem 'bootsnap', require: false
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
