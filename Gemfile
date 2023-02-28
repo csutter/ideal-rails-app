@@ -22,6 +22,7 @@ gem 'jbuilder'
 gem 'jsbundling-rails'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
+gem 'tailwindcss-rails'
 gem 'turbo-rails'
 
 group :development, :test do
